@@ -1,0 +1,95 @@
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin:0px 20%;
+}
+
+header {
+    display: flex;
+    flex: 1 1 auto;
+    max-width: 200px;
+    /* Try other properties for flex-direction, like
+    column and space-between*/
+    flex-direction: column;
+    /* Try other properties for justify-content, like
+    flex-end and space-between. */
+    justify-content: flex-start;
+    background-color: antiquewhite;
+}
+
+header > div {
+    background-color: aliceblue;
+    margin: 0px 20px;
+}
+
+header .name {
+    color:maroon;
+    font-weight: bold;
+}
+
+header .contacts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+header .contacts a {
+    display: flex;
+}
+
+header .contacts a:first-child {
+    padding-right: 10px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 3 3 auto;
+}
+
+main section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+}
+
+main section.resume > * {
+    width: 100%;
+}
+
+main section.projects > * {
+    width: 100%;
+}
+
+.project a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.project img {
+    width: 200px;
+    border: 1px solid black;
+}
+
+.project .link {
+    color: blue;
+    text-decoration: underline;
+}
+
+footer {
+    background-color: coral;
+    color: aqua;
+}
+
+/* 
+@media (max-width: 1000px) {
+    body {
+        margin: 0px 5%;
+        background-color: red;
+    }
+}
+*/

@@ -1,0 +1,98 @@
+.container {
+    width: 100%;
+}
+
+header {
+    display: flex;
+    /* Try other properties for flex-direction, like
+    column and space-between*/
+    flex-direction: row;
+    /* Try other properties for justify-content, like
+    flex-end and space-between. */
+    justify-content: center;
+    background-color: lightpink;
+    border: 1px solid maroon;
+}
+
+header > div {
+    background-color: aliceblue;
+    margin: 0px 20px;
+}
+
+header .name {
+    color:darkmagenta;
+    font-weight: bold;
+}
+
+header .contacts {
+    display: flex;
+    justify-content: flex-start;
+    background-color: lightgreen;
+}
+
+header .contacts a {
+    display: flex;
+}
+
+header .contacts a:first-child {
+    padding-right: 10px;
+}
+
+main {
+    display: block;
+    background-color: lightsalmon;
+    border: 1px solid orangered;
+}
+
+main section {
+    width: 50%;
+    margin: 0px auto;
+    background-color: lightgreen;
+    border: 1px solid green;
+}
+
+h3 {
+    color: red;
+    background-color: blueviolet;
+}
+
+.experience {
+    background-color: lavender;
+}
+
+ul {
+    background-color: aquamarine;
+    margin: 0px 10px;
+    padding-left: 20px;
+}
+
+.project a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.project img {
+    width: 200px;
+    border: 1px solid black;
+}
+
+.project .link {
+    color: blue;
+    text-decoration: underline;
+}
+
+footer {
+    display: flex;
+    flex-basis: 100%;
+    background-color: coral;
+    color: aqua;
+}
+
+/* 
+@media (max-width: 1000px) {
+    body {
+        margin: 0px 5%;
+        background-color: red;
+    }
+}
+*/
