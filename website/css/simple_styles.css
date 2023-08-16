@@ -1,17 +1,23 @@
 .container {
-    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 80%;
+    height: 100%;
+    margin: 0px auto;
 }
 
 header {
     display: flex;
+    flex: 1 1 auto;
+    max-width: 200px;
     /* Try other properties for flex-direction, like
     column and space-between*/
-    flex-direction: row;
+    flex-direction: column;
     /* Try other properties for justify-content, like
     flex-end and space-between. */
-    justify-content: center;
-    background-color: lightpink;
-    border: 1px solid maroon;
+    justify-content: flex-start;
+    background-color: antiquewhite;
 }
 
 header > div {
@@ -20,14 +26,15 @@ header > div {
 }
 
 header .name {
-    color:darkmagenta;
+    color:maroon;
     font-weight: bold;
 }
 
 header .contacts {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: flex-start;
-    background-color: lightgreen;
 }
 
 header .contacts a {
@@ -39,31 +46,32 @@ header .contacts a:first-child {
 }
 
 main {
-    display: block;
-    background-color: lightsalmon;
-    border: 1px solid orangered;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex: 3 3 auto;
 }
 
 main section {
-    width: 50%;
-    margin: 0px auto;
-    background-color: lightgreen;
-    border: 1px solid green;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
 }
 
-h3 {
-    color: red;
-    background-color: blueviolet;
+section.resume {
+    border-right: 1px solid lightblue;
 }
 
-.experience {
-    background-color: lavender;
+main section.resume > * {
+    width: 100%;
 }
 
-ul {
-    background-color: aquamarine;
-    margin: 0px 10px;
-    padding-left: 20px;
+main section.projects > * {
+    width: 100%;
+
 }
 
 .project a {
@@ -82,8 +90,6 @@ ul {
 }
 
 footer {
-    display: flex;
-    flex-basis: 100%;
     background-color: coral;
     color: aqua;
 }
