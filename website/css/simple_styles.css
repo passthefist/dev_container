@@ -1,3 +1,14 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.column,
+.row,
+.full-column,
+.centered {
+/* these styles aren't used in this stylesheet */
+}
+
 .container {
     display: flex;
     flex-direction: row;
@@ -17,16 +28,16 @@ header {
     /* Try other properties for justify-content, like
     flex-end and space-between. */
     justify-content: flex-start;
-    background-color: antiquewhite;
+    background-color: darkblue;
+    color: white;
 }
 
 header > div {
-    background-color: aliceblue;
     margin: 0px 20px;
 }
 
 header .name {
-    color:maroon;
+    color: lightcoral;
     font-weight: bold;
 }
 
@@ -39,6 +50,7 @@ header .contacts {
 
 header .contacts a {
     display: flex;
+    color: aqua;
 }
 
 header .contacts a:first-child {
@@ -61,17 +73,30 @@ main section {
     flex: 1 1 auto;
 }
 
-section.resume {
-    border-right: 1px solid lightblue;
-}
-
-main section.resume > * {
+main section > * {
     width: 100%;
 }
 
-main section.projects > * {
+main section > * {
     width: 100%;
 
+}
+
+h3 {
+    margin: 0px;
+    border-bottom: 1px solid darkgrey;
+}
+
+h4 {
+    margin-bottom: 0px;
+}
+
+h5 {
+    margin: 5px 0px;
+}
+
+ul {
+    margin-top: 5px;
 }
 
 .project a {
