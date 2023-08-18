@@ -1,46 +1,217 @@
+/*
+This is a comment. Comments are not read by the browser
+and are used to give context to some code. In CSS,
+The slash-asterix combo starts a comment and the
+asterix-slash combo ends one.
+
+More comments are scattered throughout this document to
+both explain things and give suggestions for experiements
+to see how changing styles affect a page. whenever this
+file is changed, refreshing the page should show the effects
+of those changes.
+*/
+
+/* A comment can also just be one line like this one. */
+
+/*
+The body tag contains all content that will be displayed
+by the web browser.
+
+It's styling the font to use by all the children elements.
+
+An HTML Document defines the structure of the page's content,
+while a CSS Stylesheet defines the styles for the page. HTML
+is a tree of tags, where some tags contain sub-tags that
+might contain sub-tags that might contain sub-tags etc.
+
+With CSS, styles are matched to tags in the document based
+on the rule they define. In this case, the style here
+matches the <body> tag in the document. See what happens
+when the value for background-color is changed from
+"antiquewhite" to "red".
+*/
 body {
+    /* Styles follow the same form with a property
+    and a value. The property and value are separated
+    by a colon, and each one ends in a semicolon.
+    Missing a colon, semicolon, or not having it in the
+    correct form is a common error.
+    
+    The first style here controls the font, setting it
+    to Arial. If the user's browser doesn't have that
+    font, then Helvetica is a backup, followed by a
+    generic font.
+
+    The second style sets the background color for the body.
+    What happens if you change it to red?
+    */
     font-family: Arial, Helvetica, sans-serif;
+    background-color: antiquewhite;
 }
 
-.column,
-.row,
-.full-column,
-.centered {
-/* these styles aren't used in this stylesheet */
-}
+/*
+While the previous rule matched a specific tag, this rule
+will match the tag that has id="container". Any rule that
+starts with a # like this one is called an id, since it
+will match exactly one tag with the corresponding id.
 
-.container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+In this case, it defines which tag is the container for the
+content. Defininig a top level element to contain the
+content gives better control over page styles and layout. 
+
+See if you can find which tag this rule matches in the
+HTML document.
+*/ 
+#container {
+    /* 
+    Each element on a page is really just a box. A CSS stylesheet
+    can control the size of each box and how it's placed on the page.
+    This is called the CSS "Box Model".
+
+    These styles set the width and height of the box for the #container
+    to be 80 and 100 percent of it's parent box. In this case, the body
+    tag. Other options here are to set the exact number of pixels for
+    the width/height, or values like min-content which are more contextual.
+    Min-content is used later, with more information about it there. */
     width: 80%;
     height: 100%;
-    margin: 0px auto;
-}
 
-header {
+    /* Each box also has a margin and padding. Margin is extra space
+    outside the box, while padding is extra space within it.
+    
+    The style for padding below sets it to have none. The syle for
+    margin sets it to have none at the top or bottom, and automatically
+    set the margin for the left and right. This has the effect of
+    centering it vertically.
+    */
+    margin: 0 auto;
+    padding: 0;
+
+    /* There's multiple ways to dispay the content in a tag.
+    The common ones are block, inline, and flex. Flex allows
+    for a more responsive and flexible layout, hence the name.
+   
+    Since CSS is based on the box model, this display mode is
+    commonly referred to as "flexbox".
+    */
     display: flex;
-    flex: 1 1 auto;
-    max-width: 200px;
-    /* Try other properties for flex-direction, like
-    column and space-between*/
-    flex-direction: column;
-    /* Try other properties for justify-content, like
-    flex-end and space-between. */
-    justify-content: flex-start;
+
+    /* Flex direction sets the direction elements will flow in.
+    With a "row" value, they'll flow from left-to-right in a
+    horizontal row as far as they can. Other options are "column",
+    where they'll flow in a vertical column from top-to-bottom and
+    things like row-reverse where they'll flow in a row but from
+    right-to-left instead of left-to-right.*/
+    flex-direction: row;
+
+    /* When child elements are too long for the flex element they
+    are children of, they need to know what to do. Flex-wrap controls
+    how and if they will wrap the flow. Using the nowrap value for
+    this property sets it to keep going even if there isn't space
+    for it, possibly overflowing past the parent element. */
+    flex-wrap: nowrap;
+
+    /* What happens if you uncomment out the line below? */
+    /* background-color: red; */
+}
+
+/* The header tag is useful for what's called semantic HTML.
+Semantic HTML helps browsers understand the context of the
+page and can be used by screen readers for accessibility.
+*/
+header {
+    /*
+    What part of the page will be updated if the
+    background-color is changed? Which HTML tag
+    does this match?
+    */
     background-color: darkblue;
+    /* what will happen if this color is changed? */
     color: white;
+
+    display: flex;
+    
+    /* This one is a bit complicated, but it basically sets
+    what proportion of a parent element to take up. Other
+    elements in a flex flow might have this defined also.
+
+    Since flex is designed to be flexible, it allows for
+    setting maximum and minimum proportions. Don't worry
+    about this for now, it will be explained more later */
+    flex: 1 1 auto;
+
+    /* This tells the browser to set the width to the
+    smallest size that will fit the content. Try setting
+    this to max-content or removing it altogether. */
+    width: min-content;
+
+    /* Instead of running in a row, this element's children will flow
+    in a vertical column. */
+    flex-direction: column;
+    
+    /* Justify content is used with flexbox to control how elements
+    are aligned. It supports values like center to justify to
+    the center of the flow and flex-start to the start of the flow.
+    In this case, the content is justified to the start.
+
+    Try other values like center, space-between or flex-end and
+    see what happens */
+    justify-content: flex-start;
+
+    padding: 0px 5px 0px 20px;
 }
 
-header > div {
-    margin: 0px 20px;
+/*
+These modify the stylings of heading tags. There's 6
+headings, called h1, h2, h3, h4, h5, and h6. By default,
+a browser defines styles for these tags, but often the
+a stylesheet will modify these headings for the design
+of the page.
+*/
+h3 {
+    /* By default many of these have margins defined.
+    For the design of this page, we want to change the
+    margins for these tags */
+    margin: 0px;
+    border-bottom: 1px solid darkgrey;
 }
 
+h4 {
+    margin-bottom: 0px;
+}
+
+h5 {
+    margin: 5px 0px;
+}
+
+/*
+This rule means 'Any tag with class="name" that is a
+child of the header tag'. When multiple values are
+separated by just a space, it always reads as each
+value matching a child of the first. It's usually
+easier to read rules backwards, since the last part
+of the line matches the actual element being styled
+while the first part is the parent to start with.
+
+The .name class can be any child, so a structure like
+this would mean that the <p> tag will be styled by
+this rule.
+
+<header>
+   <div class="top">
+        <p class="name">
+            Words go here.
+        </p>
+    </div>
+</header>
+*/
 header .name {
     color: lightcoral;
     font-weight: bold;
 }
 
+/* What does this rule mean? Which element does it match
+in the HTML?*/
 header .contacts {
     display: flex;
     flex-direction: row;
@@ -48,13 +219,29 @@ header .contacts {
     justify-content: flex-start;
 }
 
+/* This matches an <a> tag that is a child of a tag with
+class="contacts" that is a child of a <header> tag.
+
+Any elements that match a rule are affected by those styles,
+and there's two elements in the HTML document that match
+this one. Try changing the color and seeing what changes on
+the page.
+*/
 header .contacts a {
-    display: flex;
     color: aqua;
 }
 
+/* This matches an <a> tag that is the first child of a tag
+with class="contacts" that is a child of a <header> tag.
+
+Since the previous rule styled any element that matched, it
+gives a way to target just the one that is the first child
+of the parent. Try changing the rule to last-child instead
+and adding a style for the color.
+*/
 header .contacts a:first-child {
     padding-right: 10px;
+    padding-bottom: 5px;
 }
 
 main {
@@ -73,26 +260,18 @@ main section {
     flex: 1 1 auto;
 }
 
+/* The > symbol here means that the next part must be
+a direct child, and not just any child. The * symbol
+matches any element. That means this rule reads as
+
+Any element that is the direct child of a <section> tag
+that is a child of a <main> tag. */
 main section > * {
     width: 100%;
-}
 
-main section > * {
-    width: 100%;
-
-}
-
-h3 {
-    margin: 0px;
-    border-bottom: 1px solid darkgrey;
-}
-
-h4 {
-    margin-bottom: 0px;
-}
-
-h5 {
-    margin: 5px 0px;
+    /* Try uncommenting the line below. Try and predict
+    what will happen. */
+    /* background-color: red; */
 }
 
 ul {
@@ -109,6 +288,7 @@ ul {
     border: 1px solid black;
 }
 
+/* Which element does this target? */
 .project .link {
     color: blue;
     text-decoration: underline;
@@ -119,11 +299,43 @@ footer {
     color: aqua;
 }
 
-/* 
-@media (max-width: 1000px) {
+/*
+These styles aren't used in this stylesheet. It's normally
+bad practice to define empty styles, but since this is
+a document for learning, having these clearly defined as
+empty makes it more clear that they're not used.
+*/
+.column,
+.row,
+.full-column,
+.centered {}
+
+
+/*
+Media queries are used to create layouts that can
+respond to the size of a screen. This is useful
+to define different styles for desktops and mobile
+devices. If the condition is satisfied, then the
+rules within the media query blockwill be applied.
+
+The rule for the media query reads "When the 
+width of the screen is less than 1000 pixels".
+When that's the case, it will apply new styles
+to the <body> tag and the <h3> tags.
+
+Try commenting it out and slowly shrinking the
+window of your web browser until something happens.
+*/
+
+/* @media (max-width: 1000px) {
     body {
         margin: 0px 5%;
         background-color: red;
     }
-}
-*/
+
+    h3 {
+        color: green;
+        font-size: 30px;
+        font-weight: bolder;
+    }
+} */
