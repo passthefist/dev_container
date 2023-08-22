@@ -10,7 +10,7 @@ There's a lot to learn here, and lots of questions to ask. What's in this docume
 and introduction. The focus is more on getting comfortable with development environments and
 gaining some background on common terms and concepts in the tech world.
 
-Refer to this page for some of the terms and concepts that will be a part of this project: [Glossary.md](Glossary.md)
+Refer to this page for some of the terms and concepts that will be a part of this project: [Glossary.md](docs/Glossary.md)
 
 ## Technical Introduction ## 
 
