@@ -2,6 +2,43 @@
 
 This repository contains the files, libraries and applications for a base development environment.
 
+You'll set up this environment and use it to build and publish a personal website using Github's
+free website hosting features. By the end, you'll be comfortable with the basic workflows around
+software development and basic HTML/CSS.
+
+There's a lot to learn here, and lots of questions to ask. What's in this document is just an overview 
+and introduction. The focus is more on getting comfortable with development environments and
+gaining some background on common terms and concepts in the tech world.
+
+Refer to this page for some of the terms and concepts that will be a part of this project: [Glossary.md](Glossary.md)
+
+## Technical Introduction ## 
+
+Before reading through this, it's helpful to read through the glossary linked above.
+
+You'll be installing a code editor, creating a virtual server using Docker to act as the host for your website, familliarizing yourself with version control, . 
+
+The environment uses Docker, which is a platform that allows for easy management of virtual servers. 
+It's like your own personal cloud computing environment, hosted on your computer instead of
+a data center. These virtual environments are referred to as images and containers, which are
+run by Docker as if they are a completely separate computer (but actually running on yours in a virtual
+environment). Containers can easily be created, cloned, and updated which has a lot of advantages for software development.
+
+By being able to create and clone servers with standard configurations, developers
+can be sure they are interacting with the same environment as each other and the live environment.
+Commonly, the live environment is referred to as "production" while the one 
+developers work in is referred to as "development" or "local". Separating the two means that code can be tested
+before it's deployed to the actual users of the application. With this setup, you'll have a development
+environment using Docker and a production environment using Github's free website hosting features.
+
+The main focus of this repository is on bulding core development practices like testing before 
+deploying, using version control to keep track of code changes, and interacting with the command line 
+console. A skeleton for a simple website has been provided to build these practices while also creating 
+an online resume to learn basic HTML and CSS. Periodically, you'll be using Git to publish the changes
+made in your local development environment to your production environment on Github.
+
+This repository contains the files, libraries and applications for a base development environment.
+
 The environment uses Docker, which is a platform that allows for easy management of virtual servers. 
 It's like your own personal cloud computing environment, hosted on your computer instead of
 some data center. These virtual environments are referred to as images and containers, which are
@@ -21,7 +58,7 @@ console. A skeleton for a simple website has been provided to build these practi
 an online resume to learn basic HTML and CSS. Periodically, you'll be using Git to publish the changes
 made in your local development environment to your production environment on Github.
 
-# Setting Up the Environment
+## Setting Up the Environment ##
 
 You'll need 3 things first: a code editor, Docker Desktop, and the Github application.
 
