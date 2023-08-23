@@ -20,6 +20,7 @@ reference here are the terms alphabetically:
 - [The Cloud](#the-cloud)
 - [Version Control](#version-control)
 - [Virtualization](#virtualization)
+- [Virtual Server](#virtualization)
 
 ### Server
 In the simplest case, a server is a computer that's connected to the internet
@@ -100,11 +101,19 @@ instead of a program running directly on a computer, it can instead run inside a
 computer. This allows for things like running Windows on a Macbook or playing an N64 game
 on a laptop as if it was the game console.
 
+### Virtual Server
+A virtual server is the same as a server, but instead of being an actual computer like normal, it
+uses virtualization to simulate a server instead. If a developer wanted to create a copy of a
+normal server for another developer, they'd have to create a whole new real computer and physically
+move it to their place of work. With a virtual server, since it's not a real computer, a copy
+can be made and sent like any other file. Basically, you could email a copy of a virtual server to
+someone instead of having to actually build a real one. Virtual Servers typically run in a container. 
+
 ### The Cloud
 The cloud usually refers to some service on the internet that expands the funcationality
 of a personal computer or mobile device. A common example is storing photos in the cloud, where rather
 than storing those photos on your phone they are backed up on some server that you can then access on
-another computer. GitHub offers cloud storage of program code.
+another computer or phone. GitHub offers cloud storage of program code.
 
 ### Container
 In computing, a container refers to thechnology that bundles an application with all of
@@ -112,6 +121,14 @@ the other software the application needs to run, such as an operating system, th
 libraries. Containers are virtual environments, meaning that they can run anywhere that supports them, 
 whether on a personal laptop or server, without the risk of a missing software library or a different 
 operating system causing the application to not work.
+
+### Virtual Server
+A virtual server is the same as a server, but instead of being an actual computer like normal, it
+uses virtualization to simulate a server instead. If a developer wanted to create a copy of a
+normal server for another developer, they'd have to create a whole new real computer and physically
+move it to their place of work. With a virtual server, since it's not a real computer, a copy
+can be made and sent like any other file. Basically, you could email a copy of a virtual server to
+someone instead of having to actually build a real one. Virtual Servers typically run in a container.
 
 ### Docker
 Docker is one of many applications to manage and run containers. It allows easy creation
@@ -121,8 +138,8 @@ interface to see running containers, start or stop them, and manage what they ca
 ### Cloud Computing
 Cloud Computing combines all of the above into a service that hosts appications in
 the cloud. Before cloud computing, actual servers needed to be bought or rented in a datacenter. With 
-cloud computing, developers can instead upload containers in the same way that a cloud photo storage 
-service would back up photo files. These containers then run their applications as if running on an 
-actual server, and the developer doesn't need to worry about any of the details of the servers 
-themselves. Making sure a server was built to run programs correctly was a common problem before 
-containers and cloud computing.
+cloud computing, developers can instead use virtual servers to run their applications. They can
+upload containers in the same way that a cloud photo storage service would back up photo files. 
+These containers are them as virtual servers, and the developer can be sure that the server their
+application is running on is set up correctly. Making sure a server was built to run programs correctly 
+was a common problem before containers and cloud computing.
