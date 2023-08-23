@@ -76,8 +76,8 @@ This will open a prompt that looks like this:
 
 Type `wsl --update` and hit enter to run the command that will install software needed to run Docker on
 Windows. You should see some output that finishes with a successful update/installation or that the most
-recent version is already installed. You'll then need to log out and log back in. After logging in, you'll be able to start the Docker 
-Desktop app.
+recent version is already installed. You'll then need to log out and log back in. After logging in, 
+you'll be able to start the Docker Desktop app.
 
 ### 3. Github Desktop App ###
 
@@ -101,7 +101,8 @@ everything is set up.
 
 Once all the applications are installed and you've logged in to the Github app, you can clone this 
 repository to download all the code to your computer. First, fork this project from the "Fork" button
-in upper/middle right part of this page. 
+in upper/middle right part of this page. Don't worry too much about what's actually going on here,
+it will be covered later.
 
 ![forking repository](docs/fork.png)
 
