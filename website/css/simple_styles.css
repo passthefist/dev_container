@@ -120,7 +120,13 @@ Semantic HTML helps browsers understand the context of the
 page and can be used by screen readers for accessibility.
 */
 header {
-    background-color: darkblue;
+    /*
+    What part of the page will be updated if the
+    background-color is changed? Which HTML tag
+    does this match?
+    */
+    background-color: rgb(0, 104, 139);
+    /* what will happen if this color is changed? */
     color: white;
 
     display: flex;
@@ -150,7 +156,7 @@ header {
 
     Try other values like center, space-between or flex-end and
     see what happens */
-    justify-content: flex-start;
+    justify-content: center;
 
     padding: 0px 5px 0px 20px;
 }
@@ -222,7 +228,7 @@ this one. Try changing the color and seeing what changes on
 the page.
 */
 header .contacts a {
-    color: aqua;
+    color: rgb(0, 34, 255);
 }
 
 /* This matches an <a> tag that is the first child of a tag
@@ -265,7 +271,7 @@ main section > * {
 
     /* Try uncommenting the line below. Try and predict
     what will happen. */
-    /* background-color: red; */
+
 }
 
 ul {
