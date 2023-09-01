@@ -69,11 +69,11 @@ HTML document.
     This is called the CSS "Box Model".
 
     These styles set the width and height of the box for the #container
-    to be 80 and 100 percent of it's parent box. In this case, the body
+    to be 100 and 100 percent of it's parent box. In this case, the body
     tag. Other options here are to set the exact number of pixels for
     the width/height, or values like min-content which are more contextual.
     Min-content is used later, with more information about it there. */
-    width: 80%;
+    width: 100%;
     height: 100%;
 
     /* Each box also has a margin and padding. Margin is extra space
@@ -84,35 +84,12 @@ HTML document.
     set the margin for the left and right. This has the effect of
     centering it vertically.
     */
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
 
-    /* There's multiple ways to dispay the content in a tag.
-    The common ones are block, inline, and flex. Flex allows
-    for a more responsive and flexible layout, hence the name.
-   
-    Since CSS is based on the box model, this display mode is
-    commonly referred to as "flexbox".
-    */
-    display: flex;
-
-    /* Flex direction sets the direction elements will flow in.
-    With a "row" value, they'll flow from left-to-right in a
-    horizontal row as far as they can. Other options are "column",
-    where they'll flow in a vertical column from top-to-bottom and
-    things like row-reverse where they'll flow in a row but from
-    right-to-left instead of left-to-right.*/
-    flex-direction: row;
-
-    /* When child elements are too long for the flex element they
-    are children of, they need to know what to do. Flex-wrap controls
-    how and if they will wrap the flow. Using the nowrap value for
-    this property sets it to keep going even if there isn't space
-    for it, possibly overflowing past the parent element. */
-    flex-wrap: nowrap;
-
-    /* What happens if you uncomment out the line below? */
+    /* What happens if you uncomment out the lines below? */
     /* background-color: red; */
+    /* text-align: center; */
 }
 
 /* The header tag is useful for what's called semantic HTML.
@@ -120,38 +97,22 @@ Semantic HTML helps browsers understand the context of the
 page and can be used by screen readers for accessibility.
 */
 header {
+    /*
+    What part of the page will be updated if the
+    background-color is changed? Which HTML tag
+    does this match?
+    */
     background-color: darkblue;
+    /* what will happen if this color is changed? */
     color: white;
 
-    display: flex;
-    
-    /* This one is a bit complicated, but it basically sets
-    what proportion of a parent element to take up. Other
-    elements in a flex flow might have this defined also.
+    /* This sets the width to always be exactly 500
+    pixels wide. The height is not set, so it will
+    be as big as it needs to be to hold the text and
+    any other content it contains */
+    width: 500px;
 
-    Since flex is designed to be flexible, it allows for
-    setting maximum and minimum proportions. Don't worry
-    about this for now, it will be explained more later */
-    flex: 1 1 auto;
-
-    /* This tells the browser to set the width to the
-    smallest size that will fit the content. Try setting
-    this to max-content or removing it altogether. */
-    width: min-content;
-
-    /* Instead of running in a row, this element's children will flow
-    in a vertical column. */
-    flex-direction: column;
-    
-    /* Justify content is used with flexbox to control how elements
-    are aligned. It supports values like center to justify to
-    the center of the flow and flex-start to the start of the flow.
-    In this case, the content is justified to the start.
-
-    Try other values like center, space-between or flex-end and
-    see what happens */
-    justify-content: flex-start;
-
+    /* Try changing these values for the padding */
     padding: 0px 5px 0px 20px;
 }
 
@@ -204,24 +165,15 @@ header .name {
     font-weight: bold;
 }
 
-/* What does this rule mean? Which element does it match
-in the HTML?*/
-header .contacts {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-}
+/* This matches an <a> tag that is a child of a <header> tag.
 
-/* This matches an <a> tag that is a child of a tag with
-class="contacts" that is a child of a <header> tag.
-
+It can be any child, it doesn't have to be the next one.
 Any elements that match a rule are affected by those styles,
 and there's two elements in the HTML document that match
 this one. Try changing the color and seeing what changes on
 the page.
 */
-header .contacts a {
+header a {
     color: aqua;
 }
 
@@ -239,19 +191,13 @@ header .contacts a:first-child {
 }
 
 main {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    flex: 3 3 auto;
+    width: 100%;
 }
 
+/* This matches a <section> tag that is a
+child of a <main> tag */
 main section {
     padding: 10px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    flex: 1 1 auto;
 }
 
 /* The > symbol here means that the next part must be
@@ -270,8 +216,13 @@ main section > * {
 
 ul {
     margin-top: 5px;
+    /* By default, each item in a list will have
+    bullet points. See if you can Google for how
+    to change the syle of this list to have no bullets. */
 }
 
+/* Which elements do these next three
+rules match? */
 .project a {
     text-decoration: none;
     color: inherit;
@@ -281,55 +232,20 @@ ul {
     width: 200px;
     border: 1px solid black;
 }
-
-/* Which element does this target? */
 .project .link {
     color: blue;
     text-decoration: underline;
-}
-
-footer {
-    background-color: coral;
-    color: aqua;
 }
 
 /*
 These styles aren't used in this stylesheet. It's normally
 bad practice to define empty styles, but since this is
 a document for learning, having these clearly defined as
-empty makes it more clear that they're not used.
+empty makes it more clear that they're not used for
+learning purposes.
 */
 .column,
 .row,
 .full-column,
-.centered {}
-
-
-/*
-Media queries are used to create layouts that can
-respond to the size of a screen. This is useful
-to define different styles for desktops and mobile
-devices. If the condition is satisfied, then the
-rules within the media query blockwill be applied.
-
-The rule for the media query reads "When the 
-width of the screen is less than 1000 pixels".
-When that's the case, it will apply new styles
-to the <body> tag and the <h3> tags.
-
-Try commenting it out and slowly shrinking the
-window of your web browser until something happens.
-*/
-
-/* @media (max-width: 1000px) {
-    body {
-        margin: 0px 5%;
-        background-color: red;
-    }
-
-    h3 {
-        color: green;
-        font-size: 30px;
-        font-weight: bolder;
-    }
-} */
+.centered
+{}
