@@ -2,7 +2,8 @@
 
 This document is not organized alphabetically but rather from base definitions and concepts to ones that
 build off previous ones. It's reccomended to read through them from top to bottom, but for quick 
-reference here are the terms alphabetically:
+reference here are the terms alphabetically. Another way to navigate this is to press the `control + f`
+key combination to find a term by searching for it on the page.
 - [Cloud Computing](#cloud-computing)
 - [Code Repository](#code-repository)
 - [Code Editor](#code-editor)
@@ -44,14 +45,17 @@ to see who's working on what or review those changes to make sure they are accep
 A code repository stores a full history of all of the changes made to a project and stores all
 of the files for that project. It allows a developer to restore any state of the project and
 it's files, even if the changes weren't made by them. There are two types of code repositories -
-local and remote. A local repository exists on a developer's computer, and keeps copies of the
-files that are being worked on, but only for that developer to access. A remote repository exists
+local and remote. A *local repository* exists on a developer's computer, and keeps copies of the
+files that are being worked on, but only for that developer to access. A *remote repository* exists
 on a shared server backing up files for all developers to access.
 
 ### Git
-Git is one of many version control solutions, and is the one used by GitHub. Each project using
-Git gives developers a local repository to work with and shared remote one for collaberation
-and backups. GitHub is a common service to provide the servers to store remote repositories.
+Git is the most commonly used *version control* system. With Git, you can track changes you make to 
+files so you have a record of what has been done, and have the ability to restore to earlier versions of 
+the files if needed. Git also makes collaboration easier, allowing changes by multiple people to all be 
+shared in one *repository*. Each project using Git gives developers a *local repository* to work with 
+and shared *remote repository* for collaberation. Github is a popular service that provides servers
+to store remote Git repositories.
 
 See [Introduction to Git and Github](docs/Git_Intro.md) for more.
 
@@ -61,7 +65,8 @@ Users can share their code with others to collaborate on projects, commenting an
 each other's code changes. By backing up their code, if something goes horribly wrong on the 
 computer they're working on, instead of losing all their work they can restore from the backup.
 A GitHub profile can act as a developer's portfolio showing their projects and often used to see 
-their programming experience.
+their programming experience. Developers can connect with one another, view the code for their projects,
+and submit changes to fix bugs or add new changes to projects.
 
 See [Introduction to Git and Github](docs/Git_Intro.md) for more.
 

@@ -125,12 +125,11 @@ header {
     background-color is changed? Which HTML tag
     does this match?
     */
-    background-color: rgb(0, 104, 139);
+    background-color: darkblue;
     /* what will happen if this color is changed? */
     color: white;
 
     display: flex;
-    
     /* This one is a bit complicated, but it basically sets
     what proportion of a parent element to take up. Other
     elements in a flex flow might have this defined also.
@@ -156,7 +155,7 @@ header {
 
     Try other values like center, space-between or flex-end and
     see what happens */
-    justify-content: center;
+    justify-content: flex-start;
 
     padding: 0px 5px 0px 20px;
 }
@@ -228,7 +227,7 @@ this one. Try changing the color and seeing what changes on
 the page.
 */
 header .contacts a {
-    color: rgb(0, 34, 255);
+    color: aqua;
 }
 
 /* This matches an <a> tag that is the first child of a tag
@@ -271,7 +270,7 @@ main section > * {
 
     /* Try uncommenting the line below. Try and predict
     what will happen. */
-
+    /* background-color: red; */
 }
 
 ul {

@@ -6,7 +6,7 @@ header {
     display: flex;
     /* Try other properties for flex-direction, like
     column and row-reverse*/
-    flex-direction: column;
+    flex-direction: row;
     /* Try other properties for justify-content, like
     flex-end and space-between. */
     justify-content: center;
