@@ -3,6 +3,9 @@
 See the [Glossary](docs/Glossary.md) first to get familliar with some of the terms
 and concepts here.
 
+See the [Github Desktop App Section](#the-github-desktop-app) if you just want to see examples of how to 
+use the GitHub Desktop app.
+
 Git and GitHub work together to provide a solution for developers to collaborate on
 their work, keep track of their code, and maintain a portfolio of projects. The
 difference between Git and GitHub can be confusing, since GitHub is closely tied
@@ -131,3 +134,5 @@ your computer by pulling them down from the origin.
 ## The GitHub Website
 
 ## The GitHub Desktop App
+
+### Setting Up
