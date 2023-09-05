@@ -115,6 +115,8 @@ code repository.
 Then, in the upper left corner of the Github Desktop app, you can search for your repositories. Choose 
 this one (it should be called "dev_container") to create a copy of the repository to work with locally.
 
+![cloning repository](docs/mov/githubdesktop-cloning.mp4)
+
 You can then open the files in your code editor and use Git to commit your changes.
 
 ### 5. Start the Docker Container and Webserver ###
