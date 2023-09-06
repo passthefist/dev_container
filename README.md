@@ -68,7 +68,8 @@ the command as more text.
 
 This video shows how to open the terminal in Visual Studio Code and a sample command that echoes some
 text back as output.
-[terminal menu](opening-vs-terminal.mp4)
+
+[Opening the Terminal in Visual Studio](https://github.com/passthefist/dev_container/raw/main/docs/mov/opening-vs-terminal.mp4)
 
 Type `wsl --update` and hit enter to run the command that will install software needed to run Docker on
 Windows. You should see some output that finishes with a successful update/installation or that the most
@@ -100,19 +101,20 @@ the code to your computer. Scroll back to the top of this page (or go to https:/
 dev_container) if you're not on it. Click the "Fork" button to create a copy of this project for your
 Github account. It will take you to a prompt, where you can choose your user in the "Owner" dropdown
 and just keep the defaults for the rest. Clicking the "Create Fork" button will create your own version 
-of this project owned by your account.
+of this project owned by your account. You can follow this video as an example.
 
-[forking github repository](github-forking.mp4)
+[Creating a Fork on the Github Website](https://github.com/passthefist/dev_container/raw/main/docs/mov/github-forking.mp4)
 
 Then, in the upper left corner of the Github Desktop app, you can search for your repositories. Choose 
 this one (it should be called "dev_container") to create a copy of the repository to work with locally.
+This is called "cloning", a term you might see while in the Github Desktop App.
 
-[cloning github repository](githubdesktop-cloning.mp4)
+[Downloading the Code](https://github.com/passthefist/dev_container/raw/main/docs/mov/githubdesktop-cloning.mp4)
 
 You should then see this screen, and you can open the files in your code editor by clicking this button
 You can then open the files in your code editor and use Git to commit your changes.
 
-[opening code repo](githubdesktop-cloning.mp4)
+![opening code repo](docs/img/first-repo.png)
 
 ### 5. Start the Docker Container and Webserver ###
 
@@ -122,7 +124,7 @@ already did this as part of installing Docker. If not, you can open the it from 
 This video shows how to open the terminal in Visual Studio Code and a sample command that echoes some
 text back as output.
 
-[terminal menu](opening-vs-terminal.mp4)
+[Opening the Terminal Menu in Visual Studio](https://github.com/passthefist/dev_container/raw/main/docs/mov/opening-vs-terminal.mp4)
 
 This is the [command line console](docs/Glossary.md#command-line-console), which is a more direct and 
 powerful interface to the [operating system](docs/Glossary.md#operating-sytem) than the graphical
@@ -133,7 +135,7 @@ options such as `build`, `up`, and `down` to build, start, and stop containers r
 First, build the container by typing `docker-compose build` in the prompt and hitting enter. Then type 
 `docker-compose up` and hit enter. It should look similar to this video.
 
-[docker-starting.mp4]()
+[Creating Your Server With Docker](https://github.com/passthefist/dev_container/raw/main/docs/mov/docker-starting.mp4)
 
 **If you see an error message like this, make sure that the Docker Desktop app is running.**
 
