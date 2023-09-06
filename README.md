@@ -9,6 +9,8 @@ software development and basic HTML/CSS.
 There's a lot to learn here, and lots of questions to ask. What's in this document is just an overview 
 and introduction. Refer to this page for some of the terms and concepts that will be a part of this project: [Glossary.md](docs/Glossary.md)
 
+This is another change for a sample commit.
+
 ## Technical Introduction ## 
 
 Before reading through this, it's helpful to read through the glossary linked above to know what some
