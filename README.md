@@ -76,38 +76,51 @@ Windows. You should see some output that finishes with a successful update/insta
 recent version is already installed. You'll then need to log out and log back in. After logging in, 
 you'll be able to start the Docker Desktop app.
 
-### 3. Github Desktop App ###
+### 3. Install Github Desktop App ###
 
-We'll come back to Git, Github, and version control in general but you can reference [this page](docs/Git_Intro.md) for more after everything is set up.
+We'll come back to Git, Github, and version control in more detail but you can reference [this page](docs/Git_Intro.md) for an overview after everything is set up.
 
-The Github Desktop App provides an easier to use interface to [Git](docs/Glossary.md#version-control),
-which is the most popular solution for keeping track of code changes in [version control](docs/Glossary.md#version-control).
+There's two parts of this setup, the Github website and the Github Desktop app. Both are similar, but the difference is that the Github website stores
+code backed up on the internet while the Github Desktop app lets you move code between your computer and what's backed up on the Github website. Both
+use [version control software](docs/Glossary.md#version-control) called Git which is the most popular solution for keeping track of code changes.
 
 Developers use version control to save code in a more structured way than just saving the file as normal.
-With Git, you can periodically commit your changes to keep a log of different versions of the files that
+With Git and version control in general, you can periodically back up your changes to keep a log of different versions of the files that
 have been changed. If a bug is later discovered or a file is accidentally removed, the previous version
-can be recovered (hence calling these "version control"). Git supports many features, and the Github app
-makes using it easier. Different projects can have their own code repositories, allowing developers to
-separate or share the code they're working on to coordinate their projects. [Github](docs/Glossary.md#github) 
-is a site that hosts these projects for developers to manage using Git.
+can be recovered (hence calling it "version control"). Git supports many advanced features, so the Github app
+makes using it easier. Since each developer can have their own copy of a project and send their updates to
+a shared project, it makes collaborating on software easier to do to make sure nobody's accidentally 
+overwriting each other's code.
 
 Download the Github Desktop app from https://desktop.github.com/. Once installed, you'll need to log in
 to the app to access your Github projects in the app.
 
-### 4. Download This Project's Code (Repository) ###
+### 4. Create Your Own Copy of This Project For Your Github Account ###
 
-Once all the applications are installed and you've logged in to the Github app, you can download
-the code to your computer. Scroll back to the top of this page (or go to https://github.com/passthefist/
-dev_container) if you're not on it. Click the "Fork" button to create a copy of this project for your
-Github account. It will take you to a prompt, where you can choose your user in the "Owner" dropdown
-and just keep the defaults for the rest. Clicking the "Create Fork" button will create your own version 
-of this project owned by your account. You can follow this video as an example.
+Right now, this project isn't owned by you, so you'll need to create a copy of it that you own. Scroll back to
+the top of this page (or go to https://github.com/passthefist/ dev_container) if you're not on it. Click the "Fork"
+button to create a copy of this project for your Github account (forking just means creating a copy of a project).
+It will take you to a prompt, where you can choose your user in the "Owner" dropdown and just keep the defaults for
+the rest. Clicking the "Create Fork" button will create your own version  of this project owned by your account.
+You can follow this video as an example.
 
 https://github.com/passthefist/dev_container/assets/279303/49af98d3-ad88-4518-ba97-e96030523aec
 
-Then, in the upper left corner of the Github Desktop app, you can search for your repositories. Choose 
-this one (it should be called "dev_container") to create a copy of the repository to work with locally.
-This is called "cloning", a term you'll see while in the Github Desktop App or Github Website.
+### 5. Download This Project's Code ###
+
+Right now, the code for the project only exists on the GitHub website, but you'll need it to be
+on your computer to work on. First, open the GitHub Desktop app on your computer, then click the
+"Clone a Repository From the Internet" button. A [code repository](docs/Glossary.md#code-repository)
+is where all the code for a software project is stored, and cloning is a term Git uses for downloading
+the code in a repository and creating a copy on your computer.
+
+In the upper left corner of the Github Desktop app, you can search for your projcets, which are called
+[repositories](docs/Glossary.md#code-repository) by Git and GitHub. Choose this one (it should be called "dev_container")
+to create a copy of the repository to work with on your computer. This is called "cloning", a term you'll see
+while in the Github Desktop App or Github Website. Once you do, it will download the code for this project
+so you can work with it and use the Github Desktop app to upload your code changes to be backed up on the
+GitHub website so the code is shown as part of a portfolio of projects and your website is published on
+the internet.
 
 https://github.com/passthefist/dev_container/assets/279303/99ec12f5-b2a5-4763-bc85-d99a23aabf25
 
@@ -116,24 +129,25 @@ this button. Once the full environment is set up, you'll be able to use Git to s
 
 ![opening code repo](docs/img/first-repo.png)
 
-### 5. Start the Docker Container and Webserver ###
+### 6. Start Docker and the Webserver ###
 
-The easiest way to do this is using the command line in Visual Studio Code. If you're on Windows, you
-already did this as part of installing Docker. If not, you can open the it from the Terminal menu.
+The easiest way to do this is using the command line in Visual Studio Code. The [command line](docs/Glossary.md#command-line-console)
+is a more powerful way developers, hackers, and really anyone doing I.T. work interact with computers. Typically, we interact
+with computers graphically with a mouse and all that, but the command line is more primitive. It only takes text based commands and
+only shows text based output. A user types a command on the prompt line and hits enter to run it, which is why it's called
+the command line interface. The results of the command are shown on the next line as the output. 
 
-This video shows how to open the terminal in Visual Studio Code and a sample command that echoes some
-text back as output.
+Another name for the command line is the terminal, and this video shows how to open it in Visual Studio Code. It also
+shows a sample command to run. The command is called `echo`, which takes some text and echoes what was typed as output
+on the next line after it's run when the user presses enter.
 
 https://github.com/passthefist/dev_container/assets/279303/5c6051e5-3922-4e1b-8459-95320c8f74eb
 
-This is the [command line console](docs/Glossary.md#command-line-console), which is a more direct and 
-powerful interface to the [operating system](docs/Glossary.md#operating-sytem) than the graphical
-desktop environment. It takes a command typed on the prompt line, executing it once a user hits enter.
-Here, we'll be using it to build and run our Docker container with the `docker-compose` command. It has 
+Here, we'll be using it to build and run our server with the `docker-compose` command. It has 
 options such as `build`, `up`, and `down` to build, start, and stop containers respectively.
 
-First, build the container by typing `docker-compose build` in the prompt and hitting enter. Then type 
-`docker-compose up` and hit enter. It should look similar to this video.
+First, create and build the server by typing `docker-compose build` in the prompt and hitting enter.
+Then type `docker-compose up` and hit enter to run it. It should look similar to this video.
 
 https://github.com/passthefist/dev_container/assets/279303/c61818f3-e1e3-4535-8c2b-32a416766767
 
@@ -146,28 +160,30 @@ error during connect: this error may indicate that the docker daemon is not runn
 Once built, the container can be ran and managed from the Docker Desktop app. You can also use the 
 `docker-compose up` and `docker-compose down` commands in a terminal to start and stop it respectively.
 This video shows how to start it in the Docker Desktop app. If you're following this setup, it should
-already be running and you can see that too.
+already be running and you can see that in the app, too.
 
 https://github.com/passthefist/dev_container/assets/279303/0c0ca9e8-6498-49ed-afd2-31ccca4c77fe
 
-### 6. View the Website in Your Browser ###
+### 7. View the Website in Your Browser ###
 
 After the server has started, you can view the web page by visiting http://localhost/website in your
 web browser. You should see an ugly website that looks like a terrible resume with fake information.
 This page is using the files you just downloaded. Try changing something in the index.html file and
 refreshing to see what changed.
 
-This works because your computer is running a webserver that serves the files in this repository.
-Instead of a typical url like http://google.com/search or http://www.wikipedia.com/article
+This works because your computer is running a webserver that is lined to the files in this repository
+that you downloaded. Whenever you make a change to one of these files, refreshing the page will show
+those changes. Instead of a typical url like http://google.com/search or http://www.wikipedia.com/article
 which connect to the `google.com` and `www.wikipedia.com` webservers to show a "search" or "article" 
 page stored on those servers, `localhost` refers to your own computer. Since your computer is now 
-running a web server, it responds by serving up the web page your browser requested.
+running a web server, the browser connects to that server as if it was on the internet and shows
+the web page that your server sent.
 
 Running Docker can take a lot of system resources like RAM and CPU. When not developing, it's best to
 stop the web server conatiner, which can be done with the Docker Desktop app. Navigate to the 
 Conatainers view in the sidebar menu, then find the container you want to stop. Under the actions column,
 press the stop button to stop the container. The container can be restarted the same way, picking up
-from the state it was in when it was stopped.
+from the state it was in when it was stopped. Refer to the video above for an example.
 
 ## Next Steps ##
 
